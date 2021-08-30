@@ -60,13 +60,13 @@ class UserLogoutView(FormView):
             )
         )
 
-class UserRegistrationView(CreateView):
+"""class UserRegistrationView(CreateView):
     template_name = 'users/user_registration.html'
     model = User
     form_class = CustomUserCreationForm
-    success_url = reverse_lazy('home_app:home')
+    success_url = reverse_lazy('home_app:home')"""
 
-"""class UserRegistrationView(CreateView):
+class UserRegistrationView(CreateView):
     template_name = 'users/user_registration.html'
     model = User
     form_class = CustomUserCreationForm
@@ -74,14 +74,14 @@ class UserRegistrationView(CreateView):
 
     def post(self, request):
         email = request.POST.get('email', None)
-        #user = User.objects.filter(email__exact=email).last()
+        user = User.objects.filter(email__exact=email).last()
         if True:
             #token = get_random_string(length=34)
             url_activation = 'http://127.0.0.1:8000{path}'.format(domain=settings.BASE_URL,path=reverse_lazy('users_app:user-login', kwargs={'email': email}))
             context = {'url_activation': url_activation, 'user': user.username, 'date': now().strftime('%Y-%m-%d %H:%M:%S')}
             html_message = render_to_string('users/email_confirm_new_user.html', context)
             plain_message = strip_tags(html_message)
-            texto_email=send_mail(subject='Confirmación de registro de usuario', message=plain_message, from_email='retegi84@gmail.com',
+            texto_email=send_mail(subject='Confirmación de registro de usuario', message=plain_message, from_email='info@prueba.com',
                           recipient_list=[email], html_message=html_message)
             if texto_email:
                 #user_token = TokenToUser(user=user, token=token, date=now().strftime('%Y-%m-%d %H:%M:%S'))
@@ -91,7 +91,7 @@ class UserRegistrationView(CreateView):
                 messages.error(request, '¡ups! Algo sucedió mal.')
         else:
             messages.error(request, 'El email introducido no existe. Pruebe de nuevo o regístrese como nuevo usuario.')
-        return redirect(reverse_lazy('users_app:user-login'))"""
+        return redirect(reverse_lazy('users_app:user-login'))
 
 
 

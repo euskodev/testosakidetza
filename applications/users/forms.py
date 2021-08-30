@@ -45,7 +45,7 @@ class UserRegisterForm(forms.ModelForm):
         required=True,
         widget=forms.TextInput(
             attrs={
-                'placeholder': 'Usuario',
+                'placeholder': 'Usuariodsdf',
                 'class': 'form-control form-control-lg'
             }
         )
@@ -92,23 +92,32 @@ class CustomUserCreationForm(UserCreationForm):
         model = User
         fields = ['username','first_name','last_name','email','password1','password2']
 
+        help_texts = {
+        'username' : None,
+        'first_name': None,
+        'last_name': None,
+        'email': None,
+        'password1': None,
+        'password2': None,
+        }
 
-"""    def __init__(self, *args, **kwargs):
+
+    def __init__(self, *args, **kwargs):
         super(CustomUserCreationForm, self).__init__(*args, **kwargs)
         self.fields['username'].widget.attrs.update({'class': 'form-control'})
-        self.fields['username'].label = "Usuario"
+        self.fields['username'].label = "Nombre de usuario"
         self.fields['first_name'].widget.attrs.update({'class': 'form-control'})
-        self.fields['first_name'].label = "Apellido 1"
+        self.fields['first_name'].label = "Nombre"
         self.fields['last_name'].widget.attrs.update({'class': 'form-control'})
-        self.fields['last_name'].label = "Apellido 2"
+        self.fields['last_name'].label = "Apellido"
         self.fields['email'].widget.attrs.update({'class': 'form-control'})
         self.fields['email'].label = "Email"
         #self.fields['birth_date'].widget.attrs.update({'class': 'form-control'})
         #self.fields['birth_date'].label = "Fecha nacimiento"
         self.fields['password1'].widget.attrs.update({'class': 'form-control'})
-        self.fields['password1'].label = "Password1"
+        self.fields['password1'].label = "Password"
         self.fields['password2'].widget.attrs.update({'class': 'form-control'})
-        self.fields['password2'].label = "Password2"
+        self.fields['password2'].label = "Confirmar password"
 
     field_order = [
         'username',
@@ -117,7 +126,11 @@ class CustomUserCreationForm(UserCreationForm):
         'email',
         'password1',
         'password2']
-        """
+
+    
+    
+
+        
 
 class ResetPasswordForm(UserCreationForm):
     email = forms.CharField(

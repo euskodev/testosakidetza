@@ -21,6 +21,9 @@ urlpatterns = [
         views.PoliticaDeCookiesView.as_view(),
         name='politica_de_cookies',
     ),
-    
+    path('contact/',
+        views.ContactView.as_view(),
+        name='contact',
+    )
 
 ]

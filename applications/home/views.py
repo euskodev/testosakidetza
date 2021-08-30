@@ -19,4 +19,7 @@ class PoliticaDePrivacidadView(TemplateView):
 class PoliticaDeCookiesView(TemplateView):
     template_name = "home/politica_de_cookies.html"
 
+class ContactView(TemplateView):
+    template_name = "home/contact.html"
+
 

@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>Iniciar sesión</title>
+    <title>Contactar</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/floating-labels/">
 
@@ -48,46 +48,61 @@
     <link href="{% static 'css/floating-labels.css' %}" rel="stylesheet">
   </head>
   <body>
-    <form class="form-signin" method="POST">{% csrf_token %}
-  <div class="text-center mb-4">
+    
 
-    {% if messages %}
-      <ul class="messages p-3 p-5 list-group">
-    {% for message in messages %}
-      <li {% if message.tags %} class="{{ message.tags }} text-left list-group-item bg-success r-5"{% endif %} >{{ message }}</li>
-    {% endfor %}
-      </ul>
-    {% endif %}
-    <a href="{% url 'home_app:home' %}"><img class="mb-3" src="{% static 'img/home/testOsakidetza.png' %}" style="width:50%"></a>
-    <h1 class="h3 mb-3 font-weight-normal">Acceder a la plataforma</h1>
-     </div>
+    
+   <div class="container">
+      <div class="row">
+        <div class="col">
 
-     {{ form.as_p }}
+          <a href="{% url 'home_app:home' %}"><img class="mb-3" src="{% static 'img/home/testOsakidetza.png' %}" style="width:50%"></a>
+          <h1 class="h3 mb-3 font-weight-normal">Contactar</h1>
+           
+          {% if messages %}
+          <ul class="messages p-3 p-5 list-group">
+        {% for message in messages %}
+          <li {% if message.tags %} class="{{ message.tags }} text-left list-group-item bg-success r-5"{% endif %} >{{ message }}</li>
+        {% endfor %}
+          </ul>
+        {% endif %}
+          
+                <form action="" method="POST">
+                  {% csrf_token %}
+      
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Nombre</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+                  </div>
+      
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Email</label>
+                    <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+      
+                 
+                  
+                  <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
 
 
-  <!--<div class="form-label-group">
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-    <label for="inputEmail">Email</label>
-  </div>
+        </div>
 
-  <div class="form-label-group">
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-    <label for="inputPassword">Password</label>
-  </div>-->
 
-  <div class="checkbox mb-3">
-    <label>
-      <input type="checkbox" value="remember-me"> Recordar usuario y contraseña
-    </label>
-  </div>
-  <button style="background-color:#250F64; color:white" class="btn btn-lg btn-block mb-3" type="submit">Iniciar sesión</button>
-  <a href="{% url 'users_app:user-registration' %}"><p class="text-center">No soy usuario y quiero registrame</p></a>
-  <a href="{% url 'home_app:home' %}"><p class="text-center mt-3">Volver a la página principal</p></a>
-  <a href="{% url 'users_app:user-reset' %}"><p class="text-center mt-3">Resetear contraseña</p></a>
-<p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2021</p>
+      </div>
 
-  
-</form>
+   </div> 
+    
+    
+
+
+
+ 
+
 
 </body>
 </html>

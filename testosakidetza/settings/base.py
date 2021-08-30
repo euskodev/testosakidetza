@@ -117,14 +117,23 @@ USE_TZ = False
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 
-EMAIL_HOST = 'smtp.sendgrid.net'
+"""EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_HOST_SENDER = 'info@testosakidetza.eus'
-EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_USER = get_secret('EMAIL_API_KEY')
 EMAIL_HOST_PASSWORD = get_secret('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
-EMAIL_USE_TLS = True
+EMAIL_USE_TLS = True"""
+
+
+EMAIL_HOST = 'smtp.googemail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'retegi84@gmail.com'
+EMAIL_HOST_PASSWORD = get_secret('EMAIL_HOST_PASSWORD')
+
 
 
 #TEMA EMAIL:
 BASE_URL = 'localhost'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+
