@@ -125,10 +125,11 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True"""
 
 
-EMAIL_HOST = 'smtp.googemail.com'
+EMAIL_HOST = 'smtp.googlemail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'retegi84@gmail.com'
+EMAIL_HOST_USER = 'testosakidetza@gmail.com'
 EMAIL_HOST_PASSWORD = get_secret('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = True
 
 
 
