@@ -14,9 +14,6 @@ Comandos GIT (para que funcione hay que estar a la altura de carpeta .git)
     Empujar los cambios fusionados al repositorio remoto: Una vez que hayas hecho pull y resuelto cualquier conflicto, puedes empujar tus cambios al repositorio remoto:
         git push origin main
     
-    ###prueba de comentario1111111111111111
-
-    prueba de comentarioooooooooooooooooo222222
 
 #####################################################
 
