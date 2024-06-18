@@ -1,0 +1,23 @@
+Comandos GIT
+    Bajar código del repositorio GIT testosakidetza (hacer antes de comenzar a programar):
+        git pull
+    Subir código del repositorio GIT testosakidetza (hacer después de terminar de programar):
+        git add .
+        git commit -m "comentario"
+        git push
+
+#####################################################
+
+ENTORNO VIRTUAL
+    Activar entorno virtual:
+        source env/bin/activate
+    Desactivar entorno virtual:
+        deactivate
+
+#####################################################
+
+DJANGO
+    Arrancar servidor web Django
+        python manage.py runserver
+
+#####################################################
