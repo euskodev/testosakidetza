@@ -1,4 +1,4 @@
-Comandos GIT
+Comandos GIT (para que funcione hay que estar a la altura de carpeta .git)
     Bajar código del repositorio GIT testosakidetza (hacer antes de comenzar a programar):
         git pull
     Subir código del repositorio GIT testosakidetza (hacer después de terminar de programar):
@@ -8,7 +8,7 @@ Comandos GIT
 
 #####################################################
 
-ENTORNO VIRTUAL
+ENTORNO VIRTUAL (para que funcione tiene que estar a la altura de carpeta "env")
     Activar entorno virtual:
         source env/bin/activate
     Desactivar entorno virtual:
@@ -16,7 +16,7 @@ ENTORNO VIRTUAL
 
 #####################################################
 
-DJANGO
+DJANGO (para que funcione tiene que estar a la altura de manage.py)
     Arrancar servidor web Django
         python manage.py runserver
 
