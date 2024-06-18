@@ -30,4 +30,14 @@ class RecuperarcontrasenaView(TemplateView):
     template_name = "home/recuperar-contrasena.html"
 
 
+class PreguntasView(TemplateView):
+    template_name = "home/preguntas.html"
+
+
+class DonativosView(TemplateView):
+    template_name = "home/donativos.html"
+
+class SobrenosotrosView(TemplateView):
+    template_name = "home/sobrenosotros.html"
+
 

@@ -51,6 +51,28 @@ urlpatterns = [
     path('recuperar-contrasena/',
         views.RecuperarcontrasenaView.as_view(),
         name='recuperar-contrasena',
+    ),
+
+
+
+    path('preguntas/',
+        views.PreguntasView.as_view(),
+        name='pregunta',
+    ),
+
+
+
+    path('donativos/',
+        views.DonativosView.as_view(),
+        name='donativos',
+    ),
+
+
+
+    path('sobre-nosotros/',
+        views.SobrenosotrosView.as_view(),
+        name='sobre-nosotros',
     )
+
 
 ]

@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'applications.home'
+    'applications.home',
+    'rosetta'
 ]
 
 MIDDLEWARE = [
@@ -105,7 +106,15 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-es'
+
+LANGUAGES = (
+    ('es', ('Spanish')),
+   # ('en', _('English')),
+   # ('ca', _('Catalan')),
+    ('eu', ('Basque')),
+)
+
 
 TIME_ZONE = 'UTC'
 
