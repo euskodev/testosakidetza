@@ -5,6 +5,14 @@ Comandos GIT (para que funcione hay que estar a la altura de carpeta .git)
         git add .
         git commit -m "comentario"
         git push
+    Actualizar tu rama local con los cambios remotos: Ejecuta el siguiente comando para traer los cambios del repositorio remoto y fusionarlos con tu rama local: (Esto descargará los cambios desde la rama main del repositorio remoto y tratará de fusionarlos con tu rama main local.)
+        git pull origin main
+    Si hay conflictos entre los cambios remotos y tus cambios locales, Git te pedirá que los resuelvas manualmente. Abre los archivos con conflictos, resuélvelos y luego añade los archivos resueltos:
+        git add <archivo_con_conflicto>
+    Después, completa la fusión con un commit:
+        git commit -m "Resuelto conflicto de fusión"
+    Empujar los cambios fusionados al repositorio remoto: Una vez que hayas hecho pull y resuelto cualquier conflicto, puedes empujar tus cambios al repositorio remoto:
+        git push origin main
 
 #####################################################
 
