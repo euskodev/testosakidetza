@@ -1,5 +1,8 @@
 {% extends 'home/base.html' %}
 
+
+
+{% load i18n %}
 {% load static %}
 {% block head %}
 
@@ -103,7 +106,7 @@
 <!--boton para registrarce-->
 <div class="text-center mt-5 mb-5 ">
   <a href="{% url 'home_app:registrarse' %}"><button class="btn text-white"
-      style="background-color: #250f64;">Registrate</button></a>
+      style="background-color: #250f64;">{% trans 'Registrate' %}</button></a>
 </div>
 
 <!-- aca termina el  boton-->
