@@ -1,7 +1,7 @@
-Comandos GIT (para que funcione hay que estar a la altura de carpeta .git)
-    Bajar código del repositorio GIT testosakidetza (hacer antes de comenzar a programar):
+GIT (Es un CONTROL DE VERSIONES para que funcione hay que estar a la altura de carpeta .git)
+    BAJAR DEL REPOSITORIO GITHUB-Testosakidetza (hacer antes de comenzar a programar para bajar código de otros):
         git pull
-    Subir código del repositorio GIT testosakidetza (hacer después de terminar de programar):
+    SUBIR AL REPOSITORIO GITHUB-Testosakidetza (hacer cuando terminar de programar para compartir tu código):
         git add .
         git commit -m "comentario"
         git push
@@ -14,6 +14,17 @@ Comandos GIT (para que funcione hay que estar a la altura de carpeta .git)
     Empujar los cambios fusionados al repositorio remoto: Una vez que hayas hecho pull y resuelto cualquier conflicto, puedes empujar tus cambios al repositorio remoto:
         git push origin main
     
+#####################################################
+
+ROSETTA (Comandos para manejar django multilenguage)
+    Al principio de cada template debe haber {% load i18n %}
+    Cada testo debe ir así: {% trans 'texto' %}
+    Añadir los trans a rosetta:
+        django-admin makemessages -l es
+    URL para traducciones rosetta (pero primera hay que iniciar sesión en http://localhost:8000/admin como administrador para poder acceder a rosetta):
+        http://localhost:8000/rosetta
+    Tras traducirlas django debe compilarlas mediante este comando:
+        django-admin compilemessages
 
 #####################################################
 
@@ -28,5 +39,14 @@ ENTORNO VIRTUAL (para que funcione tiene que estar a la altura de carpeta "env")
 DJANGO (para que funcione tiene que estar a la altura de manage.py)
     Arrancar servidor web Django
         python manage.py runserver
+
+#####################################################
+
+¿Qué es STATIC?
+    Contiene los archivos tipo: imagen, .js, .css etc.
+    Para que funciones, cada template debe contener {% load static %}
+    Cada elemento se coloca así: {% static 'img/foto1.jpg' %}
+        Ejemplo1: <img src="{% static 'img/foto1.jpg' %}">
+        Ejemplo2: <div style="background-image url('{% static "img/foto1.jpg" %}')">
 
 #####################################################
