@@ -13,6 +13,10 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 import os #Internacionalización
 from django.utils.translation import gettext_lazy as _
+import json
+import getpass
+from django.urls import reverse, reverse_lazy
+import tempfile
 
 from django.conf import global_settings #Internacionalización
 
@@ -48,6 +52,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -150,9 +155,6 @@ USE_L10N = True
 USE_TZ = True
 
 USE_THOUSAND_SEPARATOR = True
-
-USE_L10N = True
-
 
 
 # Static files (CSS, JavaScript, Images)

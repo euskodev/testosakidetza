@@ -9,14 +9,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-22 17:23+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2024-06-22 21:16+0200\n"
+"Last-Translator:   <olvind78@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
 
 #: comandos.txt:21
 msgid "texto"
@@ -48,7 +49,7 @@ msgstr ""
 
 #: templates/home/index.html:109
 msgid "Registrate"
-msgstr ""
+msgstr "Apidetu"
 
 #: templates/home/index.html:367
 msgid "USUARIOS HACIENDO TEST"
@@ -56,23 +57,23 @@ msgstr ""
 
 #: templates/home/index.html:377
 msgid "Último Donativo"
-msgstr ""
+msgstr "Azken dohaintza"
 
 #: templates/home/iniciar sesion.html:52
 msgid "Iniciar sesión"
-msgstr ""
+msgstr "Saioa hasi"
 
 #: templates/home/iniciar sesion.html:68
 msgid "Usuario"
-msgstr ""
+msgstr "Erabiltzailea"
 
 #: templates/home/iniciar sesion.html:72
 msgid "Contraseña"
-msgstr ""
+msgstr "Pasahitza"
 
 #: templates/home/iniciar sesion.html:95
 msgid "Aceptar"
-msgstr ""
+msgstr "Onartu"
 
 #: templates/home/politica_de_cookies.html:30
 msgid "Política de Cookies"
