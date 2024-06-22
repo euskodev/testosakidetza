@@ -49,27 +49,27 @@
       <div class="carousel-item active">
         <img src="{% static 'img/centro-osakidetza-test-ope(1).jpg' %}" class="d-block w-100" alt="#" />
         <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
+          <h5>{% trans 'First slide label' %}</h5>
           <p>
-            Some representative placeholder content for the first slide.
+            {% trans 'Some representative placeholder content for the first slide.' %}
           </p>
         </div>
       </div>
       <div class="carousel-item">
         <img src="{% static 'img/canyon-1740973_1280.jpg' %}" class="d-block w-100" alt="#" />
         <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
+          <h5>{% trans 'Second slide label' %}</h5>
           <p>
-            Some representative placeholder content for the second slide.
+            {% trans 'Some representative placeholder content for the second slide.' %}
           </p>
         </div>
       </div>
       <div class="carousel-item">
         <img src="{% static 'img/woman-1822646_1280.jpg' %}" class="d-block w-100" alt="#" />
         <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
+          <h5>{% trans 'Third slide label' %}</h5>
           <p>
-            Some representative placeholder content for the third slide.
+            {% trans 'Some representative placeholder content for the third slide.' %}
           </p>
         </div>
       </div>
@@ -94,9 +94,9 @@
 <div class="container mt-5">
   <div class="row">
 
-    <p class="display-5" style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-      totam veritatis iste itaque praesentium dolores dolorum expedita, delectus perspiciatis consequatur maxime
-      consectetur dolorem architecto, aut tempore ex aperiam ut quo.</p>
+    <p class="display-5" style="text-align: center;">
+      {% trans 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti <br>totam veritatis iste itaque praesentium dolores dolorum expedita, delectus perspiciatis consequatur maxime <br> consectetur dolorem architecto, aut tempore ex aperiam ut quo.' %}
+    </p>
 
   </div>
 </div>
@@ -364,7 +364,7 @@
 <div>
 
   <p class="display-5 text-center" style="margin-top: 80px;">
-    <b style="color:#250f64">+100<br>USUARIOS HACIENDO TEST</b>
+    <b style="color:#250f64">+100<br>{% trans 'USUARIOS HACIENDO TEST' %}</b>
   </p>
 
 </div>
@@ -374,7 +374,7 @@
 
 <div class="text-center display-5" style="margin-top: 90px; color: #250f64;">
 
-  <p><b>Último Donativo</b><br>Maria Aguilar <br> (Donostia)</p>
+  <p><b>{% trans 'Último Donativo' %}</b><br>Maria Aguilar <br>(Donostia)</p>
 
 
 

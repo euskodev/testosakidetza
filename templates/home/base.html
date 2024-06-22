@@ -83,7 +83,7 @@
           <div style="overflow-y: visible" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             {% for language in languages %}
             <a class="dropdown-item" href="/{{ language.code }}/{{ request.get_full_path|slice:'4:' }}"
-              style="text-transform: uppercase;">{{ language.code }}</a>
+              style="text-transform: uppercase;" {% load i18n %}>{{ language.code }}</a>
             {% endfor %}
           </div>
         </div>
@@ -148,14 +148,15 @@
 
 
 
-      <p class="display-4" style="margin-top: 5%; margin-bottom: 10%;">¡Eskerrik asko!</p>
+      <p class="display-4" style="margin-top: 5%; margin-bottom: 10%;">{% trans '¡Eskerrik asko!' %}</p>
 
 
       <p>
-        <a href="{% url 'home_app:politica_de_privacidad' %}" style="text-decoration: none;" class="text-white">Política
-          de privacidad</a> / <a href="{% url 'home_app:aviso_legal' %}" style="text-decoration: none;"
-          class="text-white">Aviso legal</a> / <a href="{% url 'home_app:politica_de_cookies' %}"
-          style="text-decoration: none;" class="text-white">politica de cookies</a>
+        <a href="{% url 'home_app:politica_de_privacidad' %}" style="text-decoration: none;"
+          class="text-white">{% trans 'Política de privacidad' %}</a> / <a href="{% url 'home_app:aviso_legal' %}"
+          style="text-decoration: none;" class="text-white">{% trans 'Aviso legal' %}</a> / <a
+          href="{% url 'home_app:politica_de_cookies' %}" style="text-decoration: none;"
+          class="text-white">{% trans 'politica de cookies' %}</a>
       </p>
     </div>
 

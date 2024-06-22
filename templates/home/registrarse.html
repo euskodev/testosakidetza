@@ -1,7 +1,7 @@
 {% extends 'home/base.html' %}
 
 {% load static %}
-
+{% load i18n %}
 {% block head %}
 
 <!-- Google tag (gtag.js) -->
@@ -51,25 +51,26 @@
 
 
 
-        <h1 class="text-center" style="margin-bottom: 60px; color: #250f64; margin-top: -35px;">Registrarse</h1>
+        <h1 class="text-center" style="margin-bottom: 60px; color: #250f64; margin-top: -35px;">
+          {% trans 'Registrarse' %}</h1>
 
 
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+          <label for="exampleInputEmail1" class="form-label">{% trans 'Correo electrónico' %}</label>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
           <div id="emailHelp" class="form-text">
-            Nunca compartiremos su correo electrónico con nadie más.
+            {% trans 'Nunca compartiremos su correo electrónico con nadie más.' %}
           </div>
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Usuario</label>
+          <label for="exampleInputPassword1" class="form-label">{% trans 'Usuario' %}</label>
           <input type="text" class="form-control" id="exampleInputPassword1" />
 
 
-          <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+          <label for="exampleInputPassword1" class="form-label">{% trans 'Contraseña' %}</label>
           <input type="password" class="form-control" id="exampleInputPassword1" />
 
-          <label for="exampleInputPassword1" class="form-label">Nombre</label>
+          <label for="exampleInputPassword1" class="form-label">{% trans 'Nombre' %}</label>
           <input type="text" class="form-control" id="exampleInputPassword1" />
 
           <!--
@@ -82,14 +83,15 @@
 
 
 
-          <button type="submit" class="btn w-100 mt-3 text-white" style="background-color: #250f64;">Enviar</button>
+          <button type="submit" class="btn w-100 mt-3 text-white"
+            style="background-color: #250f64;">{% trans 'Enviar' %}</button>
 
 
 
         </div>
         <div class="mb-3 form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-          <label class="form-check-label" for="exampleCheck1">Verificado</label>
+          <label class="form-check-label" for="exampleCheck1">{% trans 'Verificado' %}</label>
         </div>
 
         <!--aca terminan los botones-->
