@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-20 19:06+0200\n"
+"POT-Creation-Date: 2024-06-22 17:23+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,164 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: comandos.txt:21
+msgid "texto"
+msgstr ""
+
+#: templates/home/index.html:52
+msgid "First slide label"
+msgstr ""
+
+#: templates/home/index.html:54
+msgid "Some representative placeholder content for the first slide."
+msgstr ""
+
+#: templates/home/index.html:61
+msgid "Second slide label"
+msgstr ""
+
+#: templates/home/index.html:63
+msgid "Some representative placeholder content for the second slide."
+msgstr ""
+
+#: templates/home/index.html:70
+msgid "Third slide label"
+msgstr ""
+
+#: templates/home/index.html:72
+msgid "Some representative placeholder content for the third slide."
+msgstr ""
+
 #: templates/home/index.html:109
 msgid "Registrate"
+msgstr ""
+
+#: templates/home/index.html:367
+msgid "USUARIOS HACIENDO TEST"
+msgstr ""
+
+#: templates/home/index.html:377
+msgid "Último Donativo"
+msgstr ""
+
+#: templates/home/iniciar sesion.html:52
+msgid "Iniciar sesión"
+msgstr ""
+
+#: templates/home/iniciar sesion.html:68
+msgid "Usuario"
+msgstr ""
+
+#: templates/home/iniciar sesion.html:72
+msgid "Contraseña"
+msgstr ""
+
+#: templates/home/iniciar sesion.html:95
+msgid "Aceptar"
+msgstr ""
+
+#: templates/home/politica_de_cookies.html:30
+msgid "Política de Cookies"
+msgstr ""
+
+#: templates/home/politica_de_cookies.html:34
+msgid "1. ¿Qué son las cookies?"
+msgstr ""
+
+#: templates/home/politica_de_cookies.html:40
+msgid "2. ¿Cómo utilizamos las cookies?"
+msgstr ""
+
+#: templates/home/politica_de_cookies.html:41
+msgid "Utilizamos cookies para los siguientes propósitos:"
+msgstr ""
+
+#: templates/home/politica_de_cookies.html:43
+msgid "Cookies necesarias:"
+msgstr ""
+
+#: templates/home/politica_de_cookies.html:51
+msgid "Cookies de funcionalidad:"
+msgstr ""
+
+#: templates/home/politica_de_cookies.html:56
+msgid "Cookies de publicidad:"
+msgstr ""
+
+#: templates/home/politica_de_cookies.html:62
+msgid "3. Gestión de las cookies"
+msgstr ""
+
+#: templates/home/politica_de_cookies.html:64
+msgid ""
+"Puede controlar y/o eliminar las cookies como desee. Para más información "
+"sobre cómo hacerlo, puede visitar"
+msgstr ""
+
+#: templates/home/politica_de_cookies.html:70
+msgid "4. Cambios en nuestra política de cookies"
+msgstr ""
+
+#: templates/home/politica_de_cookies.html:74
+msgid "Fecha de la última actualización: 14 de mayo de 2024"
+msgstr ""
+
+#: templates/home/politica_de_cookies.html:76
+msgid "5. Contacto"
+msgstr ""
+
+#: templates/home/politica_de_cookies.html:77
+msgid ""
+"Si tiene alguna pregunta sobre esta política de cookies, por favor "
+"contáctenos:"
+msgstr ""
+
+#: templates/home/politica_de_cookies.html:78
+msgid "Correo electrónico: "
+msgstr ""
+
+#: templates/home/politica_de_cookies.html:79
+msgid "Dirección: Calle Falsa 123, Ciudad Ejemplo, País"
+msgstr ""
+
+#: templates/home/politica_de_privacidad.html:29
+msgid "Política de Privacidad"
+msgstr ""
+
+#: templates/home/politica_de_privacidad.html:36
+msgid "1. Información que recopilamos"
+msgstr ""
+
+#: templates/home/politica_de_privacidad.html:38
+msgid ""
+"Recopilamos varios tipos de información para diversos fines, incluyendo:"
+msgstr ""
+
+#: templates/home/politica_de_privacidad.html:50
+msgid "2. Uso de la información"
+msgstr ""
+
+#: templates/home/politica_de_privacidad.html:52
+msgid "Utilizamos la información recopilada para los siguientes propósitos:"
+msgstr ""
+
+#: templates/home/politica_de_privacidad.html:54
+msgid "Proporcionar y mantener nuestro servicio."
+msgstr ""
+
+#: templates/home/politica_de_privacidad.html:61
+msgid "Monitorear el uso de nuestro servicio."
+msgstr ""
+
+#: templates/home/politica_de_privacidad.html:62
+msgid "Detectar, prevenir y abordar problemas técnicos."
+msgstr ""
+
+#: templates/home/politica_de_privacidad.html:65
+msgid "3. Protección de la información"
+msgstr ""
+
+#: templates/home/politica_de_privacidad.html:72
+msgid "4. Compartir información"
 msgstr ""
