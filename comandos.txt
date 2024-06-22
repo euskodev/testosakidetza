@@ -50,3 +50,17 @@ DJANGO (para que funcione tiene que estar a la altura de manage.py)
         Ejemplo2: <div style="background-image url('{% static "img/foto1.jpg" %}')">
 
 #####################################################
+
+¿Cómo crear un NUEVO PROYECTO DJANGO?
+    Crar una carpeta con el nombre del proyecto en Documetos/Proyectos/ de nuestro ordenador. Ejemplo "euskodev" Documentos/Proyectos/euskodev
+    Crear entorno virtual llamado "env" (estado dentro de la carpeta euskodev)
+        python3 -m venv env
+    Activar entorno virtual (estando a la altura de env)
+        source env bin activate
+    Instalar Django:
+        pip intall django
+    Arrancar servidor web Django (estando a la altura de manage.py)
+        python manage.py runserver
+    ¡¡Proyecto creado!! ;)
+
+####################################################
