@@ -68,6 +68,34 @@
 
       </ul>
 
+
+      <!--Idiomas-->
+      <div class="d-lg-flex col-lg-3 justify-content-lg-end">
+        {% get_current_language as CURRENT_LANGUAGE %}
+        {% get_available_languages as AVAILABLE_LANGUAGES %}
+        {% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
+
+        <div class="dropdown">
+          <button class="btn dropdown-toggle text-black" style="text-transform: uppercase;" type="button"
+            id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{ CURRENT_LANGUAGE }}
+          </button>
+          <div style="overflow-y: visible" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            {% for language in languages %}
+            <a class="dropdown-item" href="/{{ language.code }}/{{ request.get_full_path|slice:'4:' }}"
+              style="text-transform: uppercase;">{{ language.code }}</a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <!--/Languages-->
+
+
+
+
+
+
+
       <div class="col-md-3 text-end">
 
         <!--aca inicia el boton  de iniciar sesion-->
