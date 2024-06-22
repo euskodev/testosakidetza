@@ -11,7 +11,10 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-import os
+import os #Internacionalización
+from django.utils.translation import gettext_lazy as _
+
+from django.conf import global_settings #Internacionalización
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -106,14 +109,29 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'es-es'
+LANGUAGE_CODE = 'es-ES'
+# LANGUAGE_CODE = 'en-US'
 
 LANGUAGES = (
-    ('es', ('Spanish')),
-   # ('en', _('English')),
-   # ('ca', _('Catalan')),
-    ('eu', ('Basque')),
+    ('es', _('Spanish')),
+    #('en', _('English')),
+    #('ca', _('Catalan')),
+    ('eu', _('Basque')),
 )
+
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'es', },  # Spanish
+        #{'code': 'en', },  # English
+        #{'code': 'ca', },  # Catalan
+        {'code': 'eu', },  # Basque
+    ),
+    'default': {
+        'fallbacks': ['es'],
+        'hide_untranslated': False,
+    }
+}
+
 
 
 LOCALE_PATHS = (
@@ -122,11 +140,19 @@ LOCALE_PATHS = (
 
 
 
-TIME_ZONE = 'UTC'
+
+TIME_ZONE = 'Europe/Madrid'
 
 USE_I18N = True
 
+USE_L10N = True
+
 USE_TZ = True
+
+USE_THOUSAND_SEPARATOR = True
+
+USE_L10N = True
+
 
 
 # Static files (CSS, JavaScript, Images)
