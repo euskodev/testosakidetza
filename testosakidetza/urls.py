@@ -36,4 +36,7 @@ if 'rosetta' in settings.INSTALLED_APPS:
 urlpatterns += i18n_patterns(
     path('i18n/', include('django.conf.urls.i18n')),
     path('', include('applications.home.urls')),  # Reemplaza 'yourapp' por tu aplicación real
+
+    path('accounts/', include('allauth.urls')),
+
 )

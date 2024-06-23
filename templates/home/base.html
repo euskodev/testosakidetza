@@ -52,35 +52,41 @@
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
 
         <li>
-          <a href="{% url 'home_app:home' %}" class="nav-link px-2 link-secondary" style="color: #250f64;">Home</a>
+          <a href="{% url 'home_app:home' %}" class="nav-link px-2 link-secondary"
+            style="color: #250f64;">{% trans 'Home' %}</a>
 
         </li>
 
         <li>
-          <a href="{% url 'home_app:sobre-nosotros' %}" class="nav-link px-2" style="color: #250f64;">Sobre</a>
+          <a href="{% url 'home_app:sobre-nosotros' %}" class="nav-link px-2"
+            style="color: #250f64;">{% trans 'Sobre nosotros' %}</a>
         </li>
         <!--  <li><a href="#" class="nav-link px-2" style="color: #250f64;">Pricing</a></li>-->
 
         <li>
-          <a href="{% url 'home_app:contactar' %}" class="nav-link px-2" style="color: #250f64;">Contactar</a>
+          <a href="{% url 'home_app:contactar' %}" class="nav-link px-2"
+            style="color: #250f64;">{% trans 'Contactar' %}</a>
         </li>
-        
+
         {% get_current_language as CURRENT_LANGUAGE %}
         {% get_available_languages as AVAILABLE_LANGUAGES %}
         {% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" style="text-transform:uppercase; background-color: #250f64; color:white; border-radius:25px;" href="#" data-bs-toggle="dropdown" aria-expanded="false">{{ CURRENT_LANGUAGE }}</a>
+          <a class="nav-link dropdown-toggle"
+            style="text-transform:uppercase; background-color: #250f64; color:white; border-radius:25px;" href="#"
+            data-bs-toggle="dropdown" aria-expanded="false">{{ CURRENT_LANGUAGE }}</a>
           <ul class="dropdown-menu">
             {% for language in languages %}
-            <li><a class="dropdown-item" style="text-transform:uppercase; color: #250f64;" href="/{{ language.code }}/{{ request.get_full_path|slice:'4:' }}">{{ language.code }}</a></li>
+            <li><a class="dropdown-item" style="text-transform:uppercase; color: #250f64;"
+                href="/{{ language.code }}/{{ request.get_full_path|slice:'4:' }}">{{ language.code }}</a></li>
             {% endfor %}
           </ul>
         </li>
         <!-- <li><a href="#" class="nav-link px-2" style="color: #250f64;">About</a></li>-->
-        
+
       </ul>
 
-     
+
 
 
 
@@ -98,7 +104,7 @@
 
         <a href="{% url 'home_app:iniciar sesion' %}"> <button type="button" class="btn me-2"
             style=" border: 2px solid #250f64">
-            Iniciar sesión
+            {% trans 'Iniciar sesión' %}
           </button></a>
 
         <!--aca termina el boton de iniciar sesion-->
@@ -106,7 +112,7 @@
         <!--aca inicia el boton de registrarse-->
 
         <a href=" {% url 'home_app:registrarse' %}"> <button type="button" class="btn text-white"
-            style="background-color: #250f64;">Registrarse</button></a>
+            style="background-color: #250f64;">{% trans 'Registrarse' %}</button></a>
 
         <!--aca termina el boton de registrarse-->
 
