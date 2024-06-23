@@ -101,16 +101,23 @@
           <!--aca inicia el  boton de recuperar contraseña-->
 
 
-          <a href="{% url 'home_app:recuperar-contrasena' %}"
-            style="text-decoration: none;">{% trans 'Recuperar Contraseña' %}</a>
-
+          
           <!--aca termina el boton de recuperar contraseña-->
 
 
           <!--<div id="emailHelp" class="form-text">
               Nunca compartiremos su correo electrónico con nadie más.
             </div>
-          </div>-->
+          </div>--><br>
+          <a href="http://localhost:8000/es/accounts/google/login/?process=login">
+            <div class="w-100 btn bg-light p-1">
+              <img src="{% static 'img/google-icon.png' %}" class="text-left mr-5" style="width:30px; margin-right:10px;">
+              <label class="ml-5">{% trans 'Iniciar con gmail' %}</label>
+            </div>
+          </a>
+
+          <a href="{% url 'home_app:recuperar-contrasena' %}"
+            style="text-decoration: none;">{% trans 'Recuperar Contraseña' %}</a>
 
 
 
