@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'applications.home',
+    'applications.learning',
     'rosetta',
     'allauth',
     'allauth.account',
