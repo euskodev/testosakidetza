@@ -1,4 +1,7 @@
 from django.db import models
+from django.contrib.auth.models import User
+import datetime
+from django.utils import timezone
 
 # Create your models here
 
@@ -8,6 +11,8 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+correctAnswer = [('A','A'),('B','B'),('C','C'),('D','D'),('No detallado','No detallado')]
+
 class Test(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     number = models.IntegerField(blank=True, null=True)
@@ -16,8 +21,18 @@ class Test(models.Model):
     bAnswer = models.CharField(max_length=350, blank=True, null=True)
     cAnswer = models.CharField(max_length=350, blank=True, null=True)
     dAnswer = models.CharField(max_length=350, blank=True, null=True)
-    correctAnswer = models.CharField(max_length=5, blank=True, null=True)
-    
+    correctAnswer = models.CharField(choices=correctAnswer,max_length=15, blank=True, null=True)
     def __str__(self):
         return self.question
 
+
+class UserAnswer(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    number = models.IntegerField(blank=True, null=True)
+    category = models.CharField(max_length=30,blank=True, null=True)
+    answerProgresionCorrect = models.IntegerField(blank=True, null=True)
+    correctAnswerCounter = models.IntegerField(blank=True, null=True) #Si se redsponde incorrecto se resetea a cero
+    incorrectAnswerCounter = models.IntegerField(blank=True, null=True)
+    datetime = models.DateTimeField(default=timezone.now)
+    def __str__(self):
+        return self.user

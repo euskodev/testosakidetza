@@ -1,5 +1,5 @@
 {% extends 'home/base.html' %}
-
+{% load i18n %}
 {% load static %}
 {% block head %}
 
@@ -26,119 +26,59 @@
 
 <div class=" container">
     <div class="row">
-
-
         <!--   <div style="color:radial-gradient(200px top, ellipse, white, #1162ac, black);" class="p-3"></div>-->
-
-
 
         <!--este es el titulo-->
 
         <div>
-            <h1 class="text-center display-3 col-lg-12 col-md-12">{% trans 'Iniciemos con el
-                aprendizaje' %}
+            <h1 class="text-center display-6 col-lg-12 col-md-12">{{ test.category}}
             </h1>
+            <h3 class="text-center">{{ test.number }}/300</h3>
         </div>
-
         <!--aca termina el titulo-->
 
-
-
         <!--aca es la pregunta-->
-        <div style="padding-top: 150px;">
-
-
-            <p class="display-4 col-lg-12 col-md-12" style="padding-bottom: 50px;">{% trans .'Cuál es la cantidad correcta al
-                aplicar un suero vitamínico en una infante de 2 años.' %}</p>
-
-
-
+        <div style="">
+            <p class="display-6 col-lg-12 col-md-12" style="padding-bottom: px;">{{ test.number }}.-{{ test.question }}</p>
         </div>
-
         <!--aca termina la pregunta-->
 
-
         <!--este div esta vaciio-->
-
-        <div class="display-6" style="padding-bottom: 30px;">
-
-
-            <button class="col col-lg-4 col-md-12">100 ml</button><br>
-
-
-            <button class="btn">50 ml</button><br>
-
-            <button class="btn btn-primary">50 ml</button><br>
-
-
-        </div>
+        <form method="post">
+            {% csrf_token %}
+            <input type="hidden" name="answer" value="{{ test.aAnswer }}">
+            <input type="hidden" name="category" value="{{ test.category }}">
+            <input type="hidden" name="number" value="{{ test.number }}">
+            <button class="btn btn-secondary w-25 m-3" type="submit">{{ test.aAnswer }}</button>
+        </form>
+        <form method="post">
+            {% csrf_token %}
+            <input type="hidden" name="answer" value="{{ test.bAnswer }}">
+            <input type="hidden" name="category" value="{{ test.category }}">
+            <input type="hidden" name="number" value="{{ test.number }}">
+            <button class="btn btn-secondary w-25 m-3" type="submit">{{ test.bAnswer }}</button>
+        </form>
+        <form method="post">
+            {% csrf_token %}
+            <input type="hidden" name="answer" value="{{ test.cAnswer }}">
+            <input type="hidden" name="category" value="{{ test.category }}">
+            <input type="hidden" name="number" value="{{ test.number }}">
+            <button class="btn btn-secondary w-25 m-3" type="submit">{{ test.cAnswer }}</button>
+        </form>
+        <form method="post">
+            {% csrf_token %}
+            <input type="hidden" name="answer" value="{{ test.dAnswer }}">
+            <input type="hidden" name="category" value="{{ test.category }}">
+            <input type="hidden" name="number" value="{{ test.number }}">
+            <button class="btn btn-secondary w-25 m-3" type="submit">{{ test.dAnswer }}</button>
+        </form>
 
         <!--aca teremina el div vaci-->
 
     </div>
+</div>
 
 
-
-
-
-    <!--aca son los botones de falso y verdadero-->
-
-    <div>
-
-
-        <div>
-
-            <button class="col col-lg-12 col-md-12 text-white"
-                style="margin-bottom: auto; background-color: #250f64;">{% trans 'verdadero' %}</button>
-
-
-        </div>
-
-
-        <br><br>
-        <!--aca se dividen los bootones-->
-
-
-        <div>
-
-
-            <button class="col col-lg-12 col-md-12 text-white"
-                style="background-color: #250f64;">{% trans 'falso' %}</button>
-
-
-        </div>
-
-
-
-
-    </div>
-    <!--aca terminan losbotones de falso y verdadero-->
-
-
-
-
-
-
-
-    <!--
-             <div class="col-sm-6 mb-3 mb-sm-0">
-                 <div class="card">
-                     <div class="card-body">
-                         <h5 class="card-title">Special title treatment</h5>
-                         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                         <a href="#" class="btn btn-primary">Go somewhere</a>
-                     </div>
-                 </div>
-             </div>
-
-
-             <div class="form-group">
-                 <label for="exampleFormControlTextarea1">Escribe tu mensaje</label>
-                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                     placeholder="Escribe aquí"></textarea>
-             </div>
-
--->
 
 
     {% endblock %}

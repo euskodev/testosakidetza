@@ -198,8 +198,7 @@ USE_THOUSAND_SEPARATOR = True
 STATIC_URL = 'static/'
 BASE_URL = 'localhost'
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    "/var/www/static/",
+    os.path.join(BASE_DIR, 'static'),
 ]
 
 # Default primary key field type
