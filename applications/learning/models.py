@@ -33,6 +33,15 @@ class UserAnswer(models.Model):
     answerProgresionCorrect = models.IntegerField(blank=True, null=True)
     correctAnswerCounter = models.IntegerField(blank=True, null=True) #Si se redsponde incorrecto se resetea a cero
     incorrectAnswerCounter = models.IntegerField(blank=True, null=True)
-    datetime = models.DateTimeField(default=timezone.now)
+    datetime = models.DateTimeField(default=timezone.now, null=True)
     def __str__(self):
-        return self.user
+        return str(self.id)
+    
+class MyLearning(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True, blank=True)
+    datetime = models.DateTimeField(default=timezone.now, null=True)
+    def __str__(self):
+        return str(self.category)
+    
+

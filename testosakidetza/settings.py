@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'applications.home',
     'applications.learning',
+    'applications.social',
     'rosetta',
     'allauth',
     'allauth.account',
