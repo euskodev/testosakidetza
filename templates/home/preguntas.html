@@ -95,11 +95,10 @@
                 <button class="btn btn-secondary w-25 m-3" type="submit" onclick="alert('Incorrecto: {{ answerTest }}');">{{ test.dAnswer }}</button>
                 {% endif %}
             </form>
-
-
              <!-- Progesion panel-->
             <div class="p-5 bg-light" style="position:absolute;bottom:0; width:100%;">
                 <h4 class="">Tu progresión</h4>
+                
                 {% for test in questionList %}
                 {% if test.answerProgresionCorrect == 4 %}
                 <div class="border" style="width:20px; height:20px; font-size:10px; color:black;text-align:center; float:left; background-color: lime;">{{ test.number }}</div>
@@ -118,8 +117,6 @@
             </div>
             <!--Fin del Progresion panel-->
         </div>
-
-
         <!--Panel Social para comentar los usuarios-->
         <div class="col-2 bg-light border pl-1 pr-1" style="height:100vh;">
             <h3 class="text-center">Social</h3>
@@ -127,7 +124,6 @@
             {% for chat in chat %}
                 <p class="m-0 p-0"><b style="color: #250f64;">{{ chat.user }}: </b>{{ chat.text }}</p>
             {% endfor %}    
-
             <form class="" style="position:absolute;bottom:0px;" method="post">
                 {% csrf_token %}
                 <div class="form-group">

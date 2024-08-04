@@ -4,6 +4,8 @@ from django.views.generic import (
     ListView
 )
 from applications.learning.models import MyLearning, Category
+from django.http import HttpResponse
+
 
 class HomePageView(TemplateView):
     template_name = "home/index.html"
@@ -11,7 +13,7 @@ class HomePageView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['user']=self.request.user
-        context['myLearning']=MyLearning.objects.filter(user=self.request.user)
+        context['myLearning']=MyLearning.objects.filter(user=self.request.user.id)
         context['category']=Category.objects.all()
         return context
     
@@ -50,14 +52,11 @@ class RegistrarseView(TemplateView):
 class IniciarsesionView(TemplateView):
     template_name = "home/iniciar sesion.html"
 
-
 class RecuperarcontrasenaView(TemplateView):
     template_name = "home/recuperar-contrasena.html"
 
-
 class PreguntasView(TemplateView):
     template_name = "home/preguntas.html"
-
 
 class DonativosView(TemplateView):
     template_name = "home/donativos.html"

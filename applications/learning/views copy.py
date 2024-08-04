@@ -11,13 +11,9 @@ from applications.learning.models import Category
 from django.db.models import Q
 # Create your views here.
 
-
-def getFirstQuestion(userId, categoryName):
-        firstTextQuery=UserAnswer.objects.filter(user=userId, category=categoryName, correctAnswerCounter__lt=4).order_by('number').first()
-        return firstTextQuery
-
 class NextQuestionView(TemplateView):
     template_name = "home/preguntas.html"
+
 
     #Primera vez que se accede a las preguntas
     def get_context_data(self, **kwargs):
@@ -30,9 +26,8 @@ class NextQuestionView(TemplateView):
         context['categoria'] = categoryName
         user = self.request.user
         userId = self.request.user.id
-        firstTextQuery = getFirstQuestion(userId, categoryName)
+        firstTextQuery = UserAnswer.objects.filter(user=userId, category=categoryName, correctAnswerCounter__lt=4).order_by('number').first()
         #firstTextQuery = UserAnswer.objects.filter(user=userId, category=categoryName, correctAnswerCounter__lt=4).order_by('number').first()
-        
 
         if firstTextQuery:
             firstTextNumber = firstTextQuery.number
@@ -65,13 +60,10 @@ class NextQuestionView(TemplateView):
         answer_dePosta = request.POST.get('answer','')  # Obtener el valor del campo 'opciones'
         # Aquí puedes procesar la opción seleccionada como lo necesites
         category_dePost = request.POST.get('category', '')
-        categoryNamePost = request.POST.get('category', '')
         number_dePost = request.POST.get('number', '')
-        numberPost = request.POST.get('number', '')
         userAnswer_dePost = request.POST.get('answer','')
         correctAnswer_dePost = request.POST.get('correctAnswer','')
         user=self.request.user
-        userName=self.request.user
         userId = self.request.user.id
         chatPhrase = request.POST.get('chatPhrase','')
         chat = TestChat()
@@ -84,45 +76,31 @@ class NextQuestionView(TemplateView):
 
         #Tomar la respuesta del usuario y guardar en la base de datos
         try:
-            print("Tryyyyyyyyyyyyyyyy", userName, categoryNamePost, numberPost)
-            UserAnswer.objects.get(user = user, category=categoryNamePost, number=numberPost)
-            form = UserAnswer.objects.get(user = user, category=categoryNamePost, number=numberPost)
-            print(form)
-            print(form.user)
-            print(form.category)
-            print(form.number)
-            print(form.id)
+            UserAnswer.objects.get(user = user, category=category_dePost, number=number_dePost)
+            form = UserAnswer.objects.get(user = user, category=category_dePost, number=number_dePost)
             if userAnswer_dePost == correctAnswer_dePost:
-                print("userAnswer_dePost: ", userAnswer_dePost)
-                print("correctAnswer_dePost: ", correctAnswer_dePost)
                 form.answerProgresionCorrect = form.answerProgresionCorrect + 1
                 form.correctAnswerCounter = form.correctAnswerCounter + 1
             else:
                 form.incorrectAnswerCounter = form.incorrectAnswerCounter + 1
                 form.answerProgresionCorrect = 0
-            form.lastAnsweredQuestion = numberPost
             form.save()
         except:
-            print("Entra en excepción 100")
             form = UserAnswer()
             form.user=self.request.user
             form.number=number_dePost
             form.category=category_dePost
             form.incorrectAnswerCounter = 0
             if userAnswer_dePost == correctAnswer_dePost:
-                print("Entra en if 107")
                 form.correctAnswerCounter = 1
                 form.answerProgresionCorrect = 1
                 form.incorrectAnswerCounter = 0
                 
             else:
                 form.correctAnswerCounter = 0
-                print("Entra en else 114")
                 form.incorrectAnswerCounter = 1
-                form.answerProgresionCorrect = 0
-            form.lastAnsweredQuestion = numberPost    
+                form.answerProgresionCorrect = 0      
             form.save()  
-
         context = super().get_context_data(**kwargs)
         context['categoria'] = self.kwargs['category']
         category = self.kwargs['category']
@@ -174,4 +152,3 @@ class NextQuestionView(TemplateView):
         return render(request, 'home/preguntas.html', context)
 
 
-    

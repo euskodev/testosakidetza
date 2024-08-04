@@ -15,7 +15,7 @@ admin.site.register(Test,TestAdmin)
 
 
 class UserAnswerAdmin(admin.ModelAdmin):
-    list_display = ("user","category", "number","category","answerProgresionCorrect","correctAnswerCounter","incorrectAnswerCounter","datetime")
+    list_display = ("user","category", "number","answerProgresionCorrect","correctAnswerCounter","incorrectAnswerCounter","datetime","lastAnsweredQuestion","questionCircleCounter")
 admin.site.register(UserAnswer,UserAnswerAdmin)
 
 class MyLearningAdmin(admin.ModelAdmin):

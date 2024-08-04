@@ -17,9 +17,7 @@
   gtag('js', new Date());
 
   gtag('config', 'G-ZM6GBKCS3R');
-</script>
-
-
+</script> 
 
 
 {% endblock %}
@@ -27,7 +25,6 @@
 
 
 <!--ac inicia el carousel-->
-
 <div class="container">
   <div id="carouselExampleCaptions" class="carousel slide">
     <div class="carousel-indicators">
@@ -120,6 +117,7 @@
       
 <div class="container">
   <div class="row">
+
     {% for category in category %}
     <div class="col-lg-4 col-md-12 p-3">
         {{ category.name }}
@@ -136,7 +134,7 @@
           <!-- <h5 class="card-title">Card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
           <div class="row">
-            <a href="{% url 'learning_app:nextQuestion' category=category.name %}" class="btn col-4"><img src="{% static 'img/testInteligenteBoton.png' %}" alt=""></a>
+            <a href="{% url 'learning_app:nextQuestion' category.id %}" class="btn col-4"><img src="{% static 'img/testInteligenteBoton.png' %}" alt=""></a>
             <a href="#" class="btn col-4"><img src="{% static 'img/mis50TestDificilesBoton.png' %}" alt=""></a>
             <a href="#" class="btn col-4"><img src="{% static 'img/miPrevisionBoton.png' %}" alt=""></a>
           </div>
@@ -147,247 +145,8 @@
 
 
 
-    <br><br><br><br><br>
-
-
-    <div class="col-lg-4 col-md-12 p-3">
-
-      <div class="card" style="">
-
-        <form method="post" style="position:absolute; left:80%;">
-          {% csrf_token %}
-          <input type="hidden" name="category" value="auxiliarAdministrativoOsakidetza">
-          <button class="btn" type="submit" style="background-color:lime;">Añadir</button>
-        </form>
-
-        <img class="card-img-top" src="{% static 'img/auxiliarAdministrativoBotonES.png' %}" alt="...">
-        <div class="card-body">
-          <!-- <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-          <div class="row">
-            <a href="{% url 'learning_app:nextQuestion' category='Auxiliar Administrativo' %}" class="btn col-4"><img src="{% static 'img/testInteligenteBoton.png' %}" alt=""></a>
-            <a href="#" class="btn col-4"><img src="{% static 'img/mis50TestDificilesBoton.png' %}" alt=""></a>
-            <a href="#" class="btn col-4"><img src="{% static 'img/miPrevisionBoton.png' %}" alt=""></a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <div class="col-lg-4 col-md-12 p-3">
-      <div class="card">
-        <img src="{% static 'img/administrativoBotonES.png' %}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <!-- <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-
-          <div class="row">
-            <a href="#" class="btn col-4"><img src="{% static 'img/testInteligenteBoton.png' %}" alt=""></a>
-            <a href="#" class="btn col-4"><img src="{% static 'img/mis50TestDificilesBoton.png' %}" alt=""></a>
-            <a href="#" class="btn col-4"><img src="{% static 'img/miPrevisionBoton.png' %}" alt=""></a>
-          </div>
-
-
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-12 p-3">
-      <div class="card">
-        <img src="{%  static 'img/celadorBotonES(1).png' %}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <!-- <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-
-          <div class="row">
-            <a href="#" class="btn col-4"><img src="{% static 'img/testInteligenteBoton.png' %}" alt=""></a>
-            <a href="#" class="btn col-4"><img src="{% static 'img/mis50TestDificilesBoton.png' %}" alt=""></a>
-            <a href="#" class="btn col-4"><img src="{% static 'img/miPrevisionBoton.png' %}" alt=""></a>
-          </div>
-
-
-
-        </div>
-      </div>
-
-    </div>
-
   </div>
 
-  <!--aca commienza el segundo row para categorias-->
-
-  <div class="row">
-
-    <div class="col-lg-4  col-md-12 p-3">
-      <div class="card">
-        <img src="{% static 'img/operarioDeServiciosBotonES.png' %}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <!-- <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-          <div class="row">
-            <a href="#" class="btn col-4"><img src="{% static 'img/testInteligenteBoton.png' %}" alt=""></a>
-            <a href="#" class="btn col-4"><img src="{% static 'img/mis50TestDificilesBoton.png' %}" alt=""></a>
-            <a href="#" class="btn col-4"><img src="{% static 'img/miPrevisionBoton.png' %}" alt=""></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-12 p-3">
-
-      <div class="card">
-        <img src="{% static 'img/auxiliarDeEnfermeriaBotonES.png' %}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <!-- <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-          <div class="row">
-            <a href="#" class="btn col-4"><img src="{% static 'img/testInteligenteBoton.png' %}" alt=""></a>
-            <a href="#" class="btn col-4"><img src="{% static 'img/mis50TestDificilesBoton.png' %}" alt=""></a>
-            <a href="#" class="btn col-4"><img src="{% static 'img/miPrevisionBoton.png' %}" alt=""></a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-12 p-3">
-
-      <div class="card">
-        <img src="{% static 'img/enfermeriaBotonES.png' %}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <!--<h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-
-          <div class="row">
-            <a href="#" class="btn col-4"><img src="{% static 'img/testInteligenteBoton.png' %}" alt=""></a>
-            <a href="#" class="btn col-4"><img src="{% static 'img/mis50TestDificilesBoton.png' %}" alt=""></a>
-            <a href="#" class="btn col-4"><img src="{% static 'img/miPrevisionBoton.png' %}" alt=""></a>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-
-
-
-  </div>
-
-  <!--aca comienza el siguiente row para las categorias-->
-
-  <div class="row">
-
-    <div class="col-lg-4 col-md-12 p-3">
-      <div class="card">
-        <img src="{% static 'img/medicoDeFamiliaBotonES.png' %}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <!--<h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-
-          <div class="row">
-            <a href="#" class="btn col-4"><img src="{% static 'img/testInteligenteBoton.png' %}" alt=""></a>
-            <a href="#" class="btn col-4"><img src="{% static 'img/mis50TestDificilesBoton.png' %}" alt=""></a>
-            <a href="#" class="btn col-4"><img src="{% static 'img/miPrevisionBoton.png' %}" alt=""></a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-12 p-3">
-
-      <div class="card">
-        <img src="{% static 'img/tecnicoDeLaboratorioBotonES.png' %}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <!-- <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-          <div class="row">
-            <a href="#" class="btn col-4"><img src="{% static 'img/testInteligenteBoton.png' %}" alt=""></a>
-            <a href="#" class="btn col-4"><img src="{% static 'img/mis50TestDificilesBoton.png' %}" alt=""></a>
-            <a href="#" class="btn col-4"><img src="{% static 'img/miPrevisionBoton.png' %}" alt=""></a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-12 p-3">
-
-      <div class="card">
-        <img src="{% static 'img/tecnicoDeRadioBotonES.png' %}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <!--<h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-          <div class="row">
-            <a href="#" class="btn col-4"><img src="{% static 'img/testInteligenteBoton.png' %}" alt=""></a>
-            <a href="#" class="btn  col-4"><img src="{% static 'mg/mis50TestDificilesBoton.png' %}" alt=""></a>
-            <a href="#" class="btn col-4"><img src="{% static 'img/miPrevisionBoton.png' %}" alt=""></a>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-
-
-
-  </div>
-
-  <div class="row">
-
-    <div class="col-lg-4 col-md-12 p-3">
-      <div class="card">
-        <img src="{% static 'img/fisioterapeutaBotonES.png' %}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <!-- <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-          <div class="row">
-            <a href="#" class="btn  col-4"><img src="{% static 'img/testInteligenteBoton.png' %}" alt=""></a>
-            <a href="#" class="btn col-4"><img src="{% static 'img/mis50TestDificilesBoton.png' %}" alt=""></a>
-            <a href="#" class="btn col-4"><img src="{% static 'img/miPrevisionBoton.png' %}" alt=""></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-12 p-3">
-
-      <div class="card">
-        <img src="{% static 'img/tecnicoEspecialistaInformaticaBotonES.png' %}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <!--<h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-          <div class="row">
-            <a href="#" class="btn col-4"><img src="{% static 'img/testInteligenteBoton.png' %}" alt=""></a>
-            <a href="#" class="btn  col-4"><img src="{% static 'img/mis50TestDificilesBoton.png' %}" alt=""></a>
-            <a href="#" class="btn col-4"><img src="{% static 'img/miPrevisionBoton.png' %}" alt=""></a>
-
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-12 p-3">
-
-      <div class="card">
-        <img src="{% static 'img/auxiliarDeEnfermeriaBotonES.png' %}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <!--<h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-          <div class="row">
-            <a href="#" class="btn col-4"><img src="{% static 'img/testInteligenteBoton.png' %}" alt=""></a>
-            <a href="#" class="btn col-4"><img src="{% static 'img/mis50TestDificilesBoton.png' %}" alt=""></a>
-            <a href="#" class="btn col-4"><img src="{% static 'img/miPrevisionBoton.png' %}" alt=""></a>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-
-
-
-  </div>
 
 
 
