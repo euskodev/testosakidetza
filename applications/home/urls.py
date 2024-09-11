@@ -61,7 +61,6 @@ urlpatterns = [
     ),
 
 
-
     path('donativos/',
         views.DonativosView.as_view(),
         name='donativos',
