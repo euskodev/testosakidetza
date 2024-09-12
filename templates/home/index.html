@@ -5,9 +5,13 @@
 {% load i18n %}
 {% load static %}
 {% block head %}
+<!--adsense-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7368947938518365"
+  crossorigin="anonymous"></script>
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7368947938518365"
   crossorigin="anonymous"></script>
+
 <meta name="google-adsense-account" content="ca-pub-1565972943494658">
 <title>TestOsakidetza - Web</title>
 <!-- Google tag (gtag.js) -->
@@ -33,7 +37,7 @@
   <div class="row">
 
     <div class="col-lg-12"
-      style="background-size: cover ;padding-top:20%; text-shadow: 4px 2px 30px white; text-align: center ; height: 35vh;background-image: url('{% static "img/centro-osakidetza-arriba.jpg" %}');">
+      style="background-size: cover ;padding-top:20%; text-shadow: 4px 2px 30px white; text-align: center ; height: 35vh;background-image: url('{% static "img/centro-osakidetza-test-ope.jpg" %}');">
       <h2>PREPARACIÓN DE AOPOCISIONES PARA EMPLEO PUBLICO</h2>
     </div>
 
@@ -111,7 +115,7 @@
 <div class="container mt-5">
   <div class="row">
 
-    <p style="text-align: left;">
+    <p style=" text-align: left;">
       <b>{% trans '¡Bienvenido a TestOsakidetza!</b> Tu plataforma ideal para preparar oposiciones. Ofrecemos una experiencia de aprendizaje cómoda, amena y eficiente, diseñada para ayudarte a alcanzar tus metas. Conéctate con otros aspirantes, comparte experiencias y accede a recursos exclusivos. Únete a nuestra comunidad y comienza tu camino hacia el éxito hoy mismo. ¡Prepárate con TestOsakidetza!' %}
     </p>
 
@@ -142,7 +146,7 @@
     {% for category in category %}
     <div class="col-lg-4 col-md-12 p-3">
       {{ category.name }}
-      <div class="card" style="">
+      <div class="card">
 
         <form method="post" style="position:absolute; left:80%;">
           {% csrf_token %}
