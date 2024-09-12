@@ -1,5 +1,5 @@
 from os import name
-from django.urls import include, path
+from django.urls import include, path,staticfiles_storage,RedirectView,admin
 from . import views
 
 """
@@ -18,6 +18,13 @@ urlpatterns = [
         views.HomePageView.as_view(),
         name='home',
     ),
+
+    path('admin/', admin.site.urls),
+    path("ads.txt",
+         RedirectView.as_view(url=staticfiles_storage.url("ads.txt")),),
+
+
+
     path('aviso_legal/',
         views.AvisoLegalView.as_view(),
         name='aviso_legal',
