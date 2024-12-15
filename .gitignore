@@ -1,0 +1,17 @@
+# Ignorar configuraciones sensibles
+settings.py
+
+# Ignorar la base de datos SQLite
+db.sqlite3
+
+# Ignorar variables de entorno
+.env
+
+# Ignorar archivos generados automáticamente
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignorar archivos estáticos y multimedia generados
+/staticfiles/
+/media/
