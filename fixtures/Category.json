@@ -1,0 +1,30 @@
+[
+{
+    "model": "learning.category",
+    "pk": 1,
+    "fields": {
+        "name": "Auxiliar Administrativo"
+    }
+},
+{
+    "model": "learning.category",
+    "pk": 2,
+    "fields": {
+        "name": "Enfermería"
+    }
+},
+{
+    "model": "learning.category",
+    "pk": 3,
+    "fields": {
+        "name": "Auxiliar de Enfermería"
+    }
+},
+{
+    "model": "learning.category",
+    "pk": 4,
+    "fields": {
+        "name": "Informática"
+    }
+}
+]
